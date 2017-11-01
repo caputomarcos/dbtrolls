@@ -22,6 +22,9 @@ Follow the steps below to get everything up and running.
 pip
 ---
 
+Package Index > dbtrolls > 1.1 pip_.
+
+.. _pip: https://pypi.python.org/pypi/dbtrolls
 
 1. Create project folder:
 

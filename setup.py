@@ -13,7 +13,7 @@ dev_requires = [
 
 setup(
     name='dbtrolls',
-    version='1.0',
+    version='1.1',
     author='Marcos Caputo',
     author_email='caputo.marcos@gmail.com',
     url='https://github.com/caputomarcos/dbtrolls',
@@ -36,8 +36,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Topic :: Utilities',
-        'Topic :: Software Development :: DB Tools',
-        'Topic :: Desktop Environment',
         'License :: OSI Approved :: GNU General Public License (GPL)',
+        'Programming Language :: Python :: 3',
     ],
 )

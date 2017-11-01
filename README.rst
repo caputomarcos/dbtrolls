@@ -10,7 +10,7 @@ A simple tool to make Dev's life happy.
 
 License
 -------
-Licensed under the MIT License.
+Licensed under the GNU General Public License (GPL).
 
 
 Install

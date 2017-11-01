@@ -13,10 +13,11 @@ dev_requires = [
 
 setup(
     name='dbtrolls',
-    version='v1.0',
-    author='Marcos Caputo <caputo.marcos@gmail.com>',
+    version='1.0',
+    author='Marcos Caputo',
+    author_email='caputo.marcos@gmail.com',
     url='https://github.com/caputomarcos/dbtrolls',
-    description="dbtrolls - Rest Api Server using Dijsktra's algorithm applied to travelling salesman problem.",
+    description="dbtrolls - A simple tool to make Dev's life happy.",
     long_description=open('README.rst').read(),
     packages=find_packages(exclude=['docs', ]),
     zip_safe=True,
@@ -24,7 +25,7 @@ setup(
     extras_require={
         'dev': install_requires + dev_requires,
     },
-    license='MIT',
+    license='GPL',
     include_package_data=True,
     entry_points={
         'console_scripts': [
@@ -32,6 +33,11 @@ setup(
         ],
     },
     classifiers=[
-        'Programming Language :: Python',
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'Topic :: Utilities',
+        'Topic :: Software Development :: DB Tools',
+        'Topic :: Desktop Environment',
+        'License :: OSI Approved :: GNU General Public License (GPL)',
     ],
 )

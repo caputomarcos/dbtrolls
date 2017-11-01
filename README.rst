@@ -94,13 +94,13 @@ Usage
 
    .. code-block:: bash
 
-        $ dbtrolls -c --database_source=wpensar_sepam --database_target=wpensar_padrao
+        $ dbtrolls -c --database_source=<DATABASE_SOURCE> --database_target=<DATABASE_TARGET>
 
 2. Execute a single SQL file:
 
    .. code-block:: bash
 
-        $ dbtrolls -s wpensar_sepam.sql --fix --preload
+        $ dbtrolls -s <SQL_FILE> --fix --preload
 
 3. Execute a collection of SQL files:
 

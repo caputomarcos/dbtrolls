@@ -1,4 +1,4 @@
-.. image:: dbtrolls.png
+.. image:: https://raw.githubusercontent.com/caputomarcos/dbtrolls/master/dbtrolls.png
 
 
 

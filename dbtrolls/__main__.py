@@ -42,9 +42,9 @@ def create_config(parser, options, args):
     CONFIG_TEMPLATE = """### Example
 
 mysql:
-    host: HOST
-    user: USER
-    passwd: PASSWORD
+    host: 10.0.0.18
+    user: root
+    passwd: ff3cff653c36946f0bb3964f7a194edd
     database_source: {database_source}
     database_target: {database_target}
 
@@ -65,7 +65,7 @@ container:
             'aluno_matriculas.sql', 'sacado.sql', 'sacado_novo.sql', 'usuario_pessoa.sql']
 
 fix:
-    - sed -i 's/wpensar_santissimosenhor/wpensar_santissimosenhor/g' {database_source}.sql
+    - sed -i 's/{database_source}/{database_target}/g' {database_source}.sql
     - sed -i 's/datetime(6)/datetime/g' {database_source}.sql
     - sed -i 's/time(6)/time/g' {database_source}.sql
     - sed -i 's/DEFINER=`user_l_sorrentin`@`%`//g' {database_source}.sql
@@ -102,7 +102,7 @@ def run_single(parser, options, args):
             container = cfg['preload']['files']
             for sql in container:
                 file_path = find(sql, cfg['preload']['path'])
-                if os.path.isfile(file_path.__str__()):
+                if os.path.isfile(file_path[0]):
                     with open(file_path[0], 'r') as queries:
                         stdout = run_file(queries)
                         if not stdout:

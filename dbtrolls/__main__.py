@@ -42,9 +42,9 @@ def create_config(parser, options, args):
     CONFIG_TEMPLATE = """### Example
 
 mysql:
-    host: 10.0.0.18
-    user: root
-    passwd: ff3cff653c36946f0bb3964f7a194edd
+    host: <HOST>
+    user: <USER>
+    passwd: <PASSWORD>
     database_source: {database_source}
     database_target: {database_target}
 
@@ -68,12 +68,6 @@ fix:
     - sed -i 's/{database_source}/{database_target}/g' {database_source}.sql
     - sed -i 's/datetime(6)/datetime/g' {database_source}.sql
     - sed -i 's/time(6)/time/g' {database_source}.sql
-    - sed -i 's/DEFINER=`user_l_sorrentin`@`%`//g' {database_source}.sql
-    - sed -i 's/DEFINER=`app_padrao`@`%`//g' {database_source}.sql
-    - sed -i 's/DEFINER=`app_financeiro`@`%`//g' {database_source}.sql
-    - sed -i 's/DEFINER=`cu`@`%`//g' {database_source}.sql
-    - sed -i 's/DEFINER=`app_financeiro`@`%`//g' {database_source}.sql
-    - sed -i 's/DEFINER=`app_financeiro`@`209.59.219.243`//g' {database_source}.sql
 """.format(database_source=options.database_source, database_target=options.database_target)
 
     with open('config.yml', "w+") as a_file:

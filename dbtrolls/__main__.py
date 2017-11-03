@@ -49,7 +49,7 @@ mysql:
     database_target: {database_target}
 
 preload:
-    path: /var/www/api.padrao.wpensar.intranet/current
+    path: /var/www/api.padrao.cu.intranet/current
     files: ['pre.sql']
 
 container:
@@ -71,7 +71,7 @@ fix:
     - sed -i 's/DEFINER=`user_l_sorrentin`@`%`//g' {database_source}.sql
     - sed -i 's/DEFINER=`app_padrao`@`%`//g' {database_source}.sql
     - sed -i 's/DEFINER=`app_financeiro`@`%`//g' {database_source}.sql
-    - sed -i 's/DEFINER=`wpensar`@`%`//g' {database_source}.sql
+    - sed -i 's/DEFINER=`cu`@`%`//g' {database_source}.sql
     - sed -i 's/DEFINER=`app_financeiro`@`%`//g' {database_source}.sql
     - sed -i 's/DEFINER=`app_financeiro`@`209.59.219.243`//g' {database_source}.sql
 """.format(database_source=options.database_source, database_target=options.database_target)
